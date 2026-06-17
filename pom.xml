@@ -27,8 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
-                <start-class>com.monprojet.stock.StockApplication</start-class> 
+		<java.version>21</java.version> 
 	</properties>
 	<dependencies>
 		<dependency>
