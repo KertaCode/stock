@@ -11,7 +11,7 @@
 	<groupId>com.boulangerie</groupId>
 	<artifactId>stock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
+	<name>stock</name>
 	<description/>
 	<url/>
 	<licenses>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>21</java.version> 
 	</properties>
 	<dependencies>
 		<dependency>
