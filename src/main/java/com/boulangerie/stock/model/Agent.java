@@ -3,6 +3,8 @@ package com.boulangerie.stock.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
@@ -20,14 +22,21 @@ public class Agent {
     @Id
     @Column(name = "matricule", length = 20, nullable = false)
     private String matricule;
+    
     @Column(name = "nomAgent")
     private String nomAgent;
-    @Column(name = "fonctionAgent")
-    private String fonctionAgent;
+    
+    
+    @ManyToOne
+    @JoinColumn(name = "numFonc", referencedColumnName = "numFonc")
+    private Fonction fonctionAgent;
+    
     @Column(name = "createdAt")
     LocalDateTime createdAt;
+    
     @Column(name = "createdBy")
     private String createdBy;
+    
     @PrePersist
     public void prePersist(){
         if (createdAt==null) {
